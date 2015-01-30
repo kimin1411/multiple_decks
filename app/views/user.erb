@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Welcome to Flashcards!</h1>
+  <h2>Choose your deck!</h2>
+
+
+  <% Deck.all.each do |x|%>
+  <p><a href="/user/deck/<%= x.id %>"><%= x.name %></x></p>
+  <%end%>
+</div>

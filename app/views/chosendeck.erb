@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Welcome to Flashcards!</h1>
+  <h2>So, you chose <%= Deck.find(params[:deck]).name%></h2>
+</br>
+<h3>So, let's play!!</h3>
+  <% card = Card.where(deck_id: params[:deck]).sample %>
+  <%= card.question%>
+  <form action="checkanswer" method="POST">
+  <input type="text" name="answer" >
+  <input type="submit" value="Submit">
+</form>
+
+</div>
